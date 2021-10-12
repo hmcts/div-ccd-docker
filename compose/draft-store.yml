@@ -4,13 +4,8 @@ version: '2.4'
 
 services:
   draft-store-api:
-    build:
-      context: .
-      args:
-        - http_proxy
-        - https_proxy
-        - no_proxy
-    image: hmctspublic.azurecr.io/draft-store/service
+    build: ../database/draftstore
+    image: compose_draft-store-api:latest
     environment:
       - DRAFT_STORE_DB_HOST=draft-store-database
       - DRAFT_STORE_DB_PASSWORD=draftstore
@@ -25,6 +20,8 @@ services:
       - S2S_USER_STUB
       - RUN_DB_MIGRATION_ON_STARTUP
       - AZURE_APPLICATIONINSIGHTS_INSTRUMENTATIONKEY
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=draftstore
     ports:
       - 8800:8800
     networks:
@@ -34,7 +31,7 @@ services:
         condition: service_healthy
   draft-store-database:
     build: ../database/draftstore
-    image: hmcts/draft-store-database
+    image: hmcts/draft-store-database:latest
     environment:
       - DRAFT_STORE_DB_PASSWORD=draftstore
       - POSTGRES_USER=postgres

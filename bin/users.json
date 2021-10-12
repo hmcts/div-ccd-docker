@@ -42,6 +42,7 @@
   {"email": "befta.master.solicitor.bill@gmail.com", "roles": "caseworker,caseworker-befta_master,caseworker-befta_master-solicitor", "lastName": "Solicington", "firstName": "Bill"},
   {"email": "befta.master.solicitor.emma@gmail.com", "roles": "caseworker,caseworker-befta_master,caseworker-befta_master-solicitor", "lastName": "Solicington", "firstName": "Emma"},
   {"email": "befta.master.solicitor.jane@gmail.com", "roles": "caseworker,caseworker-befta_master,caseworker-befta_master-solicitor,pui-caa", "lastName": "Solicington", "firstName": "Jane"},
+  {"email": "befta.master.solicitor.david@gmail.com", "roles": "caseworker,caseworker-befta_master,caseworker-befta_master-solici", "lastName": "Solicington", "firstName": "David"},
 
   {"email": "befta.master.solicitor.mutlu@gmail.com", "roles": "caseworker,caseworker-befta_master,caseworker-befta_master-solicitor", "lastName": "Solicington", "firstName": "Mutlu"},
   {"email": "befta.master.solicitor.richard@gmail.com", "roles": "caseworker,caseworker-befta_master,caseworker-befta_master-solicitor", "lastName": "Solicington", "firstName": "Richard"},
@@ -51,18 +52,11 @@
 
   {"email": "befta.caseworker.caa@gmail.com", "roles": "caseworker,caseworker-caa", "lastName": "CAA", "firstName": "Caseworker"},
 
-  {"email": "ccd.docker.default@hmcts.net", "roles": "ccd-import", "lastName": "Default CCD_Docker"},
-  {"email": "auto.test.cnp@gmail.com", "roles": "caseworker-divorce", "lastName": "testsurname"},
-  {"email": "divorce_cw@hmcts.net", "roles": "caseworker,caseworker-autotest1,caseworker-autotest1-private"},
-  {"email": "TEST_CASE_WORKER_USER@mailinator.com", "roles": "caseworker,caseworker-divorce,caseworker-divorce-courtadmin,caseworker-divorce-superuser,caseworker-divorce-courtadmin_beta"},
-  {"email": "TEST_CASE_WORKER_SUPERUSER@mailinator.com", "roles": "caseworker,caseworker-divorce,caseworker-divorce-courtadmin,caseworker-divorce-superuser,caseworker-divorce-courtadmin_beta,XUI-Admin,XUI-SuperUser"},
-  {"email": "divorce_as_caseworker_solicitor@mailinator.com", "roles": "caseworker,caseworker-divorce,caseworker-divorce-courtadmin,caseworker-divorce-courtadmin_beta"},
-  {"email": "divorce_as_caseworker_superuser@mailinator.com", "roles": "caseworker,caseworker-divorce,caseworker-divorce-courtadmin,caseworker-divorce-superuser,XUI-Admin,XUI-SuperUser"},
-  {"email": "divorce_as_caseworker_la@mailinator.com", "roles": "caseworker,caseworker-divorce,caseworker-divorce-courtadmin"},
-  {"email": "divorce_as_caseworker_admin@mailinator.com", "roles": "caseworker,caseworker-divorce,caseworker-divorce-courtadmin"},
-  {"email": "TEST_SOLICITOR@mailinator.com", "roles": "caseworker,caseworker-divorce,caseworker-divorce-courtadmin"},
-  {"email": "testusername@test.com", "roles": "citizen"},
-  {"email": "befta.citizen.2@gmail.com", "roles": "citizen"},
-  {"email": "befta.citizen.3@gmail.com", "roles": "citizen"}
-]
+  {"email": "role.assignment.admin@gmail.com", "roles": "caseworker", "lastName": "RA", "firstName": "Admin"},
+  {"email": "data.store.idam.system.user@gmail.com", "roles": "", "lastName": "System User", "firstName": "Data Store"},
 
+  {"email": "ccd.ac.superuser@gmail.com", "roles": "caseworker", "lastName": "AC System User", "firstName": "Data Store"},
+  {"email": "ccd.ac.solicitor1@gmail.com", "roles": "caseworker", "lastName": "AC Solicitor1", "firstName": "Data Store"},
+
+  {"email": "divorce-solicitor@gmail.com", "roles": "caseworker,caseworker-divorce,caseworker-divorce-solicitor"}
+]

@@ -32,13 +32,13 @@ services:
       REFORM_TEAM: ccd
       REFORM_ENVIRONMENT: local
       APPINSIGHTS_INSTRUMENTATIONKEY: key
-      ELASTIC_SEARCH_ENABLED: "false"
+      ELASTIC_SEARCH_ENABLED: "true"
       ELASTIC_SEARCH_HOST: "ccd-elasticsearch"
       ELASTIC_SEARCH_FAIL_ON_IMPORT: "false"
     ports:
       - 4544:4544
     depends_on:
-      - ccd-shared-database
+      - ${CCD_POSTGRES_11:-ccd-shared-database}
       - ccd-user-profile-api
     networks:
       - ccd-network
