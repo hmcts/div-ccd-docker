@@ -196,6 +196,11 @@ services:
       MICROSERVICEKEYS_CCD_CASE_DOCUMENT_AM_API : "${IDAM_KEY_CASE_DOCUMENT}"
       MICROSERVICEKEYS_BULK_SCAN_PROCESSOR: "${IDAM_KEY_BULK_SCAN_PROCESSOR}"
       MICROSERVICEKEYS_AM_ROLE_ASSIGNMENT_SERVICE: "${IDAM_KEY_AM_ROLE_ASSIGNMENT}"
+      MICROSERVICEKEYS_DIVORCE_BACKEND: "AAAAAAAAAAAAAAAA"
+      MICROSERVICEKEYS_DIVORCE_FRONTEND: "AAAAAAAAAAAAAAAA"
+      MICROSERVICEKEYS_SSCS: "AAAAAAAAAAAAAAAA"
+      MICROSERVICEKEYS_EM_GW: "AAAAAAAAAAAAAAAA"
+      MICROSERVICEKEYS_DIVORCE_CCD_SUBMISSION: "AZBYCXDWEVFUGTHS"
       TESTING_SUPPORT_ENABLED: "true"
     networks:
       - ccd-network
@@ -247,6 +252,34 @@ services:
 # uncomment and add the desired roles to idam_stub_get_details_custom.json. Then restart the Stub Service
 #    volumes:
 #      - ${PWD}/resources/idam_stub_get_details_custom.json:/opt/app/wiremock/mappings/idam_get_details.json
+
+  redis:
+    image: redis
+    ports:
+      - 6379:6379
+    healthcheck:
+      test: ["CMD-SHELL", "redis-cli ping"]
+      interval: 10s
+      timeout: 10s
+      retries: 3
+
+  pdf-service-api:
+    image: hmctspublic.azurecr.io/cmc/pdf-service:latest
+    container_name: pdf-service-api
+    environment:
+      - JAVA_OPTS=-Xms8m -Xmx256m -Djava.security.egd=file:/dev/./urandom -XX:MaxMetaspaceSize=128m
+      - AZURE_APPLICATIONINSIGHTS_INSTRUMENTATIONKEY=fake-key
+      - S2S_URL=http://service-auth-provider-api:8080
+      - ROOT_APPENDER
+      - JSON_CONSOLE_PRETTY_PRINT
+      - ROOT_LOGGING_LEVEL
+      - REFORM_SERVICE_NAME=pdf-service
+      - REFORM_TEAM
+      - REFORM_ENVIRONMENT
+    ports:
+      - 5500:5500
+    networks:
+      - ccd-network
 
 volumes:
   ccd-docker-ccd-shared-database-data:

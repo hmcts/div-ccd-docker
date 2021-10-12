@@ -4,7 +4,7 @@
 ## CCD_definition_Store
 
 function set_env_variables() {
-    set_env_variables_from_file "./env_variables_all.txt"
+    set_env_variables_from_file "./bin/env_variables_all.txt"
 }
 
 function set_env_variables_from_file() {
