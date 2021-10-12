@@ -63,6 +63,8 @@
   {"email": "TEST_SOLICITOR@mailinator.com", "roles": "caseworker,caseworker-divorce,caseworker-divorce-courtadmin"},
   {"email": "testusername@test.com", "roles": "citizen"},
   {"email": "befta.citizen.2@gmail.com", "roles": "citizen"},
-  {"email": "befta.citizen.3@gmail.com", "roles": "citizen"}
+  {"email": "befta.citizen.3@gmail.com", "roles": "citizen"},
+  {"email": "data.store.idam.system.user@gmail.com", "roles": "", "lastName": "System User", "firstName": "Data Store"},
+  {"email": "dan@gmail.com", "roles": "caseworker,caseworker-divorce,caseworker-divorce-solicitor"}
 ]
 
