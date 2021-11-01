@@ -8,6 +8,8 @@ services:
       - ./mocks:/home/wiremock:rw
     ports:
       - 8765:8080
+    networks:
+      - ccd-network
 
 networks:
   ccd-network:

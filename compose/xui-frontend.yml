@@ -27,9 +27,10 @@ services:
       SERVICES_IDAM_OAUTH_CALLBACK_URL: /oauth2/callback
       SERVICES_S2S: http://service-auth-provider-api:8080
       REDISCLOUD_URL: http://localhost:6780
-      SYSTEM_USER_NAME: "dummy"
-      SYSTEM_USER_PASSWORD: "dummy"
+      SYSTEM_USER_NAME: divorce_as_caseworker_superuser@mailinator.com
+      SYSTEM_USER_PASSWORD: Pa55word11
 
+      SERVICES_PRD_API: http://mock-services-api:8080
       HEALTH_CCD_COMPONENT_API: http://ccd-api-gateway:3453/health
       HEALTH_CCD_DATA_API: http://ccd-data-store-api:4452/health
 

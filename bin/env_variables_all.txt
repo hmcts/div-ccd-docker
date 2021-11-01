@@ -114,3 +114,5 @@ ENVIRONMENT=local
 ELASTIC_SEARCH_ENABLED=true
 ES_ENABLED_DOCKER=true
 CCD_DOCUMENT_URL_PATTERN=https?://((localhost:4506/documents/[A-Za-z0-9-]+(?:/binary)?)|(localhost:4506/hearing-recordings/[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}/segments/[0-9]))
+XUI_SYSTEM_USER_NAME=divorce_as_caseworker_superuser@mailinator.com
+XUI_SYSTEM_USER_PASSWORD=Pa55word11
