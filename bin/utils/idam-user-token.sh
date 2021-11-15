@@ -2,7 +2,7 @@
 
 IMPORTER_USERNAME=${1:-fr_applicant_sol@sharklasers.com}
 IMPORTER_PASSWORD=${2:-Testing1234}
-IDAM_URI=${IDAM_STUB_LOCALHOST:-https://idam-api.aat.platform.hmcts.net}
+IDAM_URI=${IDAM_STUB_LOCALHOST:-http://localhost:5000}
 REDIRECT_URI="https://div-pfe-aat.service.core-compute-aat.internal/authenticated"
 CLIENT_ID="divorce"
 CLIENT_SECRET="thUphEveC2Ekuqedaneh4jEcRuba4t2t"
